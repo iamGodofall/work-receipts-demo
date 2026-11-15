@@ -1,5 +1,7 @@
 # Work Receipts gate: live demo
 
+![Canonical Work Receipts mascot](https://iamgodofall.github.io/work-receipts/mascot/full-body.png)
+
 This repository demonstrates the [Work Receipts](https://github.com/iamGodofall/work-receipts) pull-request gate on real GitHub pull requests.
 
 The gate passes a pull request only when it carries a receipt that is signed by a trusted key (`7df6:ffd2:5c80:d5a7:4694:8164:363b:8bee`), is internally consistent, has a **verified** verdict, and covers exactly the pull request's code by git tree hash.
