@@ -1,0 +1,288 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "work-receipt-bundle",
+  "receipt": {
+    "schemaVersion": "1.0",
+    "kind": "claude-code-session",
+    "recorderVersion": "0.2.0",
+    "sessionId": "demo-edited",
+    "workspaceId": "local:34fe7b4d6374f0e0",
+    "generatedAt": "2026-11-15T09:52:16.732Z",
+    "firstEventAt": "2026-11-15T09:52:11.432Z",
+    "lastEventAt": "2026-11-15T09:52:12.052Z",
+    "contract": {
+      "status": "loaded",
+      "digest": "6547a5f853d4781a191e5575efa3f6951dd6ab27a39e64150d809178adae2853",
+      "goal": "Greet people by name with an exclamation mark, keeping the tests passing",
+      "terms": {
+        "schemaVersion": "1.0",
+        "goal": "Greet people by name with an exclamation mark, keeping the tests passing",
+        "write": [
+          "src/**",
+          "test/**"
+        ],
+        "protect": [
+          "**/.env",
+          "**/.env.*",
+          "!**/.env.example",
+          "**/*.pem",
+          "**/*.key",
+          "**/id_rsa*",
+          "**/id_ed25519*"
+        ],
+        "shell": {
+          "allow": [
+            "npm test",
+            "ls",
+            "pwd",
+            "git status",
+            "git diff",
+            "git diff --stat",
+            "git diff --cached",
+            "git log --oneline",
+            "git log --oneline -n 20"
+          ],
+          "otherwise": "ask"
+        },
+        "web": "allow",
+        "mcp": "ask",
+        "ignore": [],
+        "checks": [
+          {
+            "id": "tests",
+            "description": "Tests pass",
+            "command": "npm test",
+            "timeoutSeconds": 600
+          }
+        ]
+      }
+    },
+    "chain": {
+      "valid": true,
+      "checkedEvents": 6,
+      "failedIndex": null,
+      "reason": null,
+      "headHash": "7afef74bbaeb59f3dc5592ec3a0bf746a5724b8f5a9300006754957e06063b1b"
+    },
+    "summary": {
+      "requested": 2,
+      "completed": 2,
+      "failed": 0,
+      "denied": 0,
+      "approvalRequested": 0,
+      "byCategory": {
+        "write": 2
+      }
+    },
+    "denied": [],
+    "approvalRequests": [],
+    "filesChanged": [
+      {
+        "path": "src/greet.js",
+        "sha256": "b33e634b6f7e4574366ff4ac96445175a2f480958a5356a5801238bcca767a6c"
+      },
+      {
+        "path": "test/greet.test.js",
+        "sha256": "acc90945a4a8d23d8754ec0c64025cb124020f29d8dc0119660e545c500498d7"
+      }
+    ],
+    "workingTree": {
+      "available": true,
+      "changed": [
+        "src/greet.js",
+        "test/greet.test.js"
+      ],
+      "contractChanged": false,
+      "outOfScope": [],
+      "notFromFileTools": [],
+      "ignored": []
+    },
+    "checkInputsChanged": [],
+    "checks": [
+      {
+        "id": "tests",
+        "description": "Tests pass",
+        "command": "npm test",
+        "status": "passed",
+        "exitCode": 0,
+        "durationMs": 1114,
+        "outputDigest": "64661338ba0d94ac96464a2f9d304989b59da795958c3a9fce46c9ef6f614dcb",
+        "outputTail": "ok\nnpm notice run test\nnpm notice run node test/greet.test.js",
+        "checkedAt": "2026-11-15T09:52:14.508Z"
+      }
+    ],
+    "code": {
+      "available": true,
+      "tree": "62209758f34a5643a2782396be59a5d1f562a119",
+      "treeAfterChecks": "62209758f34a5643a2782396be59a5d1f562a119",
+      "head": "d3e706cd8560f9d4d4f422edb97a1412a6c4db29"
+    },
+    "attribution": {
+      "available": true,
+      "agentLines": 2,
+      "otherLines": 0,
+      "files": [
+        {
+          "path": "src/greet.js",
+          "agentLines": 1,
+          "otherLines": 0
+        },
+        {
+          "path": "test/greet.test.js",
+          "agentLines": 1,
+          "otherLines": 0
+        }
+      ],
+      "filesTruncated": false
+    },
+    "verdict": "verified",
+    "verdictReason": "The acceptance check passed against the current working tree, and every change stayed in scope.",
+    "limitations": [
+      "The hash chain detects edits to recorded events. It cannot detect a log that was deleted or regenerated wholesale by someone with write access to this machine.",
+      "Working-tree changes come from git and include every change since the session started, including edits you made yourself. Files ignored by .gitignore are not compared.",
+      "An approval request followed by execution shows that the action ran after the host asked for permission. It does not prove which person approved it.",
+      "Acceptance checks run against the working tree when the receipt is generated, not at the moment each action ran. The receipt names that tree by its git tree hash, which excludes gitignored files and the .receipts folder.",
+      "Command previews use heuristic secret redaction and may miss unusual credential formats.",
+      "A signature identifies the user key that produced the receipt. The agent runs as the same OS user: file tools and shell commands naming the key are blocked, but a disguised shell command approved by you could still read it."
+    ]
+  },
+  "events": [
+    {
+      "eventId": "9aaf27a1-c721-4bb8-8c41-c7c1db3efec5",
+      "runId": "demo-edited",
+      "workspaceId": "local:34fe7b4d6374f0e0",
+      "actorSubject": "work-receipts",
+      "eventType": "session.baseline",
+      "payload": {
+        "baseline": {
+          "git": true,
+          "head": "d3e706cd8560f9d4d4f422edb97a1412a6c4db29",
+          "dirty": [],
+          "truncated": false
+        }
+      },
+      "createdAt": "2026-11-15T09:52:11.432Z",
+      "schemaVersion": "1.0",
+      "sequenceNo": 1,
+      "previousEventHash": null,
+      "eventHash": "c5fed7fb97a83ac3fcab3a7f909b4a3c755fec9bfd3fe164b6382c8efbfceddd"
+    },
+    {
+      "eventId": "97d31cb7-eaa7-4793-b9a2-9ccadde045df",
+      "runId": "demo-edited",
+      "workspaceId": "local:34fe7b4d6374f0e0",
+      "actorSubject": "work-receipts",
+      "eventType": "session.started",
+      "payload": {
+        "source": "startup"
+      },
+      "createdAt": "2026-11-15T09:52:11.435Z",
+      "schemaVersion": "1.0",
+      "sequenceNo": 2,
+      "previousEventHash": "c5fed7fb97a83ac3fcab3a7f909b4a3c755fec9bfd3fe164b6382c8efbfceddd",
+      "eventHash": "eb49eed578a1ba84398d549b3022e26e2b8076ced7434173a44d4d3596dc05bb"
+    },
+    {
+      "eventId": "24d18407-1aee-437b-aa1f-d439c8c87363",
+      "runId": "demo-edited",
+      "workspaceId": "local:34fe7b4d6374f0e0",
+      "actorSubject": "claude-code",
+      "eventType": "tool.requested",
+      "actionKind": "write",
+      "target": "src/greet.js",
+      "actionDigest": "4ded00aca32ce0fb35cb9e3ad6f2de190c2bc72f8c98470003875fcb8dc6a5e0",
+      "policyOutcome": "ALLOW",
+      "payload": {
+        "tool": "Write",
+        "category": "write",
+        "reason": "Write within the contract's write scope.",
+        "contract": "loaded",
+        "toolUseId": "t1"
+      },
+      "createdAt": "2026-11-15T09:52:11.611Z",
+      "schemaVersion": "1.0",
+      "sequenceNo": 3,
+      "previousEventHash": "eb49eed578a1ba84398d549b3022e26e2b8076ced7434173a44d4d3596dc05bb",
+      "eventHash": "bc66d7afd8ac28f8592fa59545f69d3a8c42ec54aa51a67ac1fecbcb23952e44"
+    },
+    {
+      "eventId": "36b879fa-9ba8-432e-ade6-16bf8166ab00",
+      "runId": "demo-edited",
+      "workspaceId": "local:34fe7b4d6374f0e0",
+      "actorSubject": "claude-code",
+      "eventType": "tool.completed",
+      "actionKind": "write",
+      "target": "src/greet.js",
+      "actionDigest": "4ded00aca32ce0fb35cb9e3ad6f2de190c2bc72f8c98470003875fcb8dc6a5e0",
+      "resultStatus": "success",
+      "payload": {
+        "tool": "Write",
+        "category": "write",
+        "toolUseId": "t1",
+        "outputDigest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "lineDigestCount": 1,
+        "lineDigestsHash": "ea395620c72d30e55a168771a4cc542e6dcb0d4aa563e0f0550b4b0948b596d1"
+      },
+      "createdAt": "2026-11-15T09:52:11.738Z",
+      "schemaVersion": "1.0",
+      "sequenceNo": 4,
+      "previousEventHash": "bc66d7afd8ac28f8592fa59545f69d3a8c42ec54aa51a67ac1fecbcb23952e44",
+      "eventHash": "81be41f358473f81ba7a708ad5abb021056e04bbf22533955c1d6a81caed5e6b"
+    },
+    {
+      "eventId": "f427488f-3e3a-400e-915f-b96b2c407096",
+      "runId": "demo-edited",
+      "workspaceId": "local:34fe7b4d6374f0e0",
+      "actorSubject": "claude-code",
+      "eventType": "tool.requested",
+      "actionKind": "write",
+      "target": "test/greet.test.js",
+      "actionDigest": "0121a43a7b77f187252d6da2ee21c4def3f9dee601f8568c31fdd2bd8434ff17",
+      "policyOutcome": "ALLOW",
+      "payload": {
+        "tool": "Write",
+        "category": "write",
+        "reason": "Write within the contract's write scope.",
+        "contract": "loaded",
+        "toolUseId": "t2"
+      },
+      "createdAt": "2026-11-15T09:52:11.895Z",
+      "schemaVersion": "1.0",
+      "sequenceNo": 5,
+      "previousEventHash": "81be41f358473f81ba7a708ad5abb021056e04bbf22533955c1d6a81caed5e6b",
+      "eventHash": "82f06d71efbc249fc11d533107cb7ba40dcdadff05fc864fde57cec351964b98"
+    },
+    {
+      "eventId": "e04a8166-f29f-4063-a8ac-2ee6c33b6c39",
+      "runId": "demo-edited",
+      "workspaceId": "local:34fe7b4d6374f0e0",
+      "actorSubject": "claude-code",
+      "eventType": "tool.completed",
+      "actionKind": "write",
+      "target": "test/greet.test.js",
+      "actionDigest": "0121a43a7b77f187252d6da2ee21c4def3f9dee601f8568c31fdd2bd8434ff17",
+      "resultStatus": "success",
+      "payload": {
+        "tool": "Write",
+        "category": "write",
+        "toolUseId": "t2",
+        "outputDigest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "lineDigestCount": 4,
+        "lineDigestsHash": "80935e865f459d909820dbc43a3eec941eb1693ddc2fc2dec45ddf3f83ecad59"
+      },
+      "createdAt": "2026-11-15T09:52:12.052Z",
+      "schemaVersion": "1.0",
+      "sequenceNo": 6,
+      "previousEventHash": "82f06d71efbc249fc11d533107cb7ba40dcdadff05fc864fde57cec351964b98",
+      "eventHash": "7afef74bbaeb59f3dc5592ec3a0bf746a5724b8f5a9300006754957e06063b1b"
+    }
+  ],
+  "bundleDigest": "8d5fc48b9a205f8bce8d1cb726252547d36f124b7bc4a8d559577a9d0db4313a",
+  "signature": {
+    "algorithm": "ed25519",
+    "publicKey": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEA3uddJyKTlJu8HBPU3yasMf6yVQZdJ6dyHSbsSbon9UM=\n-----END PUBLIC KEY-----\n",
+    "fingerprint": "7df6:ffd2:5c80:d5a7:4694:8164:363b:8bee",
+    "signature": "8tEl/tb2rFALbKHLb+ViTJFFP0fflSt7zv/HDajzBchUmNnzYMc4Ps1WFg2anKP4DJTAXOBN1mZR5xGkqWezDA==",
+    "signedAt": "2026-11-15T09:52:16.744Z"
+  }
+}
