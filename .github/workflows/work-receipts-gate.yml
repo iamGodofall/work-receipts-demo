@@ -13,6 +13,6 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-      - uses: iamGodofall/work-receipts@v0.2.0
+      - uses: iamGodofall/work-receipts@e60c2d156898475d043f54240c0323ba1719e877 # Work Receipts v0.2.1
         with:
           trusted-keys: "7df6:ffd2:5c80:d5a7:4694:8164:363b:8bee"
