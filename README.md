@@ -6,7 +6,7 @@ This repository demonstrates the [Work Receipts](https://github.com/iamGodofall/
 
 The gate passes a pull request only when it carries a receipt that is signed by a trusted key (`7df6:ffd2:5c80:d5a7:4694:8164:363b:8bee`), is internally consistent, has a **verified** verdict, and covers exactly the pull request's code by git tree hash.
 
-The workflow pins the Work Receipts v0.2.1 action to its full release commit SHA rather than a moving branch or tag. Update the pin deliberately when adopting a newer release, then verify both the passing and failing pull-request scenarios again.
+The workflow pins Work Receipts v0.2.2 to immutable commit `8ce28fb94b9811baaa30fc8a1f9ab6b410c91408`, and pins `actions/checkout` to its immutable v4 commit. This release includes versioned Git path-state evidence for executable-mode changes and symlink retargeting, legacy receipt compatibility, and an expanded 24-scenario internal regression suite. Update the pin deliberately when adopting a newer release, then verify both the passing and failing pull-request scenarios again.
 
 | Pull request | What happened | Expected gate result |
 | --- | --- | --- |

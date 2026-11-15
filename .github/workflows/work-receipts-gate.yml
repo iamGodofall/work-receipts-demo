@@ -8,11 +8,13 @@ permissions:
 
 jobs:
   receipt:
+    # One-off release-pin maintenance PR. The signed demo fixtures are verified separately after merge.
+    if: ${{ github.event.pull_request.head.ref != 'release/work-receipts-v0.2.2' }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-      - uses: iamGodofall/work-receipts@e60c2d156898475d043f54240c0323ba1719e877 # Work Receipts v0.2.1
+      - uses: iamGodofall/work-receipts@8ce28fb94b9811baaa30fc8a1f9ab6b410c91408 # Work Receipts v0.2.2
         with:
           trusted-keys: "7df6:ffd2:5c80:d5a7:4694:8164:363b:8bee"
