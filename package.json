@@ -1,0 +1,5 @@
+{
+  "name": "work-receipts-demo",
+  "private": true,
+  "scripts": { "test": "node test/greet.test.js" }
+}

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0",
+  "goal": "Greet people by name with an exclamation mark, keeping the tests passing",
+  "write": [
+    "src/**",
+    "test/**"
+  ],
+  "protect": [
+    "**/.env",
+    "**/.env.*",
+    "!**/.env.example",
+    "**/*.pem",
+    "**/*.key",
+    "**/id_rsa*",
+    "**/id_ed25519*"
+  ],
+  "shell": {
+    "allow": [
+      "npm test",
+      "ls",
+      "pwd",
+      "git status",
+      "git diff",
+      "git diff --stat",
+      "git diff --cached",
+      "git log --oneline",
+      "git log --oneline -n 20"
+    ],
+    "otherwise": "ask"
+  },
+  "web": "allow",
+  "mcp": "ask",
+  "checks": [
+    {
+      "id": "tests",
+      "description": "Tests pass",
+      "command": "npm test",
+      "timeoutSeconds": 600
+    }
+  ]
+}
